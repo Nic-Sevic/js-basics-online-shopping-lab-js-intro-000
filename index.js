@@ -43,14 +43,14 @@ function removeFromCart(item) {
   for (var i in cart) {
     var toCheck = cart[i]
     if (toCheck.itemName === item) {
-    return cart.splice(i,1)
-
+      return cart.splice(i,1)
     }
     else {
-      return `That item is not in your cart.`
+    return `That item is not in your cart.`
     }
   }
 }
+
 
 function placeOrder(cardNumber) {
   if (cardNumber === undefined){
