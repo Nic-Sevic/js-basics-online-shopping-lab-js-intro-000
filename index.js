@@ -54,12 +54,7 @@ function removeFromCart(item) {
       return cart
     }
   }
-  for (var i in cart) {
-    var toCheck = cart[i]
-    if (toCheck.itemName !== item) {
-      return 'That item is not in your cart.'
-    }
-  }
+  return 'That item is not in your cart.'
 }
 
 
