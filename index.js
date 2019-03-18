@@ -33,7 +33,8 @@ function viewCart() {
 function total() {
   let cartTotal = []
   for (let i = 0; i < cart.length; i++){
-    cartTotal.push(cart[i].itemPrice)
+    var toPush = cart[i]
+    cartTotal.push(toPush.itemPrice)
   }
   return cartTotal.reduce((accumulator, currentValue) => accumulator + currentValue)
 }
