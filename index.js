@@ -28,7 +28,7 @@ function viewCart() {
       return `In your cart, you have${inventory}.`
     }
     else {
-      return `In your cart, you have${inventory.splice(0, inventory.length-2)}, and${inventory.pop()}.`
+      return `In your cart, you have${inventory[0, inventory.length-2]}, and${inventory.pop()}.`
     }
   }
   else {
