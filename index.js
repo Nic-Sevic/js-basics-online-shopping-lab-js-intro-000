@@ -19,8 +19,9 @@ function viewCart() {
   if (cart.length > 0) {
     var inventory = []
     for (var i in cart) {
-      var nameHolder = Object.entries((cart)[i])[1]
-      var priceHolder = Object.entries((cart)[i])[3]
+      var cartHolder = cart[i]
+      var nameHolder = cartHolder.itemName
+      var priceHolder = cartHolder.itemPrice
       inventory.push(`${nameHolder[0]} at $${priceHolder[1]}`)
     }
     return `In your cart, you have ${inventory}.`
