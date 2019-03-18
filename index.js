@@ -41,7 +41,8 @@ function total() {
 
 function removeFromCart(item) {
   for (var i in cart) {
-    if (cart[i].itemName === item) {
+    var toCheck = cart[i]
+    if (toCheck.itemName === item) {
     return cart.splice(i,1)
 
     }
