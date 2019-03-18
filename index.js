@@ -22,9 +22,9 @@ function viewCart() {
       var cartHolder = cart[i]
       var nameHolder = cartHolder.itemName
       var priceHolder = cartHolder.itemPrice
-      inventory.push(`${nameHolder} at $${priceHolder}`)
+      inventory.push(` ${nameHolder} at $${priceHolder}`)
     }
-    return `In your cart, you have ${inventory}.`
+    return `In your cart, you have${inventory}.`
   }
   else {
     return `Your shopping cart is empty.`
