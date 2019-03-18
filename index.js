@@ -24,7 +24,12 @@ function viewCart() {
       var priceHolder = cartHolder.itemPrice
       inventory.push(` ${nameHolder} at $${priceHolder}`)
     }
-    return `In your cart, you have${inventory.splice(0,(inventory.length-2))}, and ${inventory.splice(inventory.length-1)}.`
+    if (inventory.length === 1) {
+      return `In your cart, you have${inventory}.`
+    }
+    else {
+      return `In your cart, you have${inventory.splice(0, inventory.length-2)}, and${inventory.pop()}.`
+    }
   }
   else {
     return `Your shopping cart is empty.`
